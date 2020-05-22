@@ -1,9 +1,6 @@
 import styles from './SearchBox.module.css';
 
 const SearchBox = ({ onSearchChange }) => {
-  // const searchChange = (event) => {
-  //   console.log(event.target.value);
-  // }
   return (
     <div className={styles.search}>
       <label className={styles.label}>
