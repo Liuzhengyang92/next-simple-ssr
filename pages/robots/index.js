@@ -1,19 +1,31 @@
+import React from 'react';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
+import Card from '../../components/Card';
+import SearchBox from '../../components/SearchBox';
 
 const Robots = (props) => {
+  const robotRef = React.createRef();
+  const [filteredRobots, setFilteredRobots] = React.useState(props.robots);
+  const onSearchFieldChange = (event) => {
+    const filteredRobots = props.robots.filter(robot => robot.name.toLocaleLowerCase().includes(event.target.value));
+    setFilteredRobots(filteredRobots);
+  }
+
   return (
-    <div>
+    <div className='container'>
       <h1>Robots</h1>
       <Link href='/'>
-        <button>Home</button>
+        <button><h2>Home</h2></button>
       </Link>
-      <div>
+      <SearchBox onSearchChange={onSearchFieldChange} />
+      <div className='content'>
         {
-          props.robots.map(robot => (
+          filteredRobots.map(robot => (
             <li key={robot.id}>
               <Link href={`robots/${robot.id}`}>
-                <a>{robot.name}</a>
+                {/* <a>{robot.name}</a> */}
+                <Card name={robot.name} id={robot.id} email={robot.email} ref={robotRef} />
               </Link>
             </li>
           ))

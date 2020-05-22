@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  margin: 3vw 2vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  text-align: center;
+  width: 96vw;
+}
+
+.search {
+  margin: 1vw auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  height: 4vw;
+  border-radius: 5px;
+  margin-bottom: 2vw;
+  box-shadow: 0 5px 5px lightgray;
+}
+
+button:hover {
+  transform: scaleY(1.05);
+  box-shadow: 0 5px 15px lightgray;
+  cursor: pointer;
+}
+
+li::marker {
+  display: none;
+}
