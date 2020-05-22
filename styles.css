@@ -28,6 +28,7 @@ button {
   border-radius: 5px;
   margin-bottom: 2vw;
   box-shadow: 0 5px 5px lightgray;
+  transition: all .2s;
 }
 
 button:hover {

@@ -27,14 +27,6 @@
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/robots": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/robots/[id]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }
